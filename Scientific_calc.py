@@ -1,5 +1,3 @@
-'''PROJECT 01'''
-
 print("This is a scientific calculator for any two numbers")
 print("Choose the operation: addition / subtraction / multiplication / division / power / remainder")
 k = input("Choose which operation do you want to use:")
