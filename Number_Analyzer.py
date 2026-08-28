@@ -7,6 +7,7 @@ print("even or odd / positive, negative or zero / prime or composite number / no
 
 k = input("Enter your option: ")
 l = ["even or odd", "positive, negative or zero", "prime or composite number", "no. of digits", "sum of digits", "reverse of a number", "palindrome check", "factors"]
+
 if k not in l:
     print("You chose the wrong option, try by running the code again")
 
