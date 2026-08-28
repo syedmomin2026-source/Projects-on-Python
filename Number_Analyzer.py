@@ -3,11 +3,10 @@ print("This is a program to analyze the number")
 n = int(input("Enter the number:"))
 
 print("What do you want to analyze?")
-print("even or odd / positive, negative or zero / prime or composite number / no. of digits / sum of digits / reverse of a number")
+print("even or odd / positive, negative or zero / prime or composite number / no. of digits / sum of digits / reverse of a number / palindrome check / factors")
 
 k = input("Enter your option: ")
-l = ["even or odd", "positive, negative or zero", "prime or composite number", "no. of digits", "sum of digits", "reverse of a number"]
-
+l = ["even or odd", "positive, negative or zero", "prime or composite number", "no. of digits", "sum of digits", "reverse of a number", "palindrome check", "factors"]
 if k not in l:
     print("You chose the wrong option, try by running the code again")
 
@@ -74,3 +73,30 @@ else:
                 j = s[i]
                 a += j
             print(a)
+
+    elif k == "palindrome check":
+        if n < 0:
+            print("Invalid number")
+        else:
+            s = str(n)
+            a = ""
+            for i in range(len(s) - 1, -1, -1):
+                j = s[i]
+                a += j
+            s = int(a)
+            if s == n:
+                print("Palindrome")
+            else:
+                print("Not a palindrome")
+
+    elif k == "factors":
+            if n == 0:
+                print("Infinite factors")
+
+            elif n < 0:
+                print("Invalid number")
+
+            else:
+                for i in range(1, n + 1):
+                    if n%i == 0:
+                        print(i)
