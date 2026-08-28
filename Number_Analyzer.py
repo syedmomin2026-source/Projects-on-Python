@@ -3,10 +3,10 @@ print("This is a program to analyze the number")
 n = int(input("Enter the number:"))
 
 print("What do you want to analyze?")
-print("even or odd / positive, negative or zero / prime or composite number / no. of digits")
+print("even or odd / positive, negative or zero / prime or composite number / no. of digits / sum of digits / reverse of a number")
 
 k = input("Enter your option: ")
-l = ["even or odd", "positive, negative or zero", "prime or composite number", "no. of digits"]
+l = ["even or odd", "positive, negative or zero", "prime or composite number", "no. of digits", "sum of digits", "reverse of a number"]
 
 if k not in l:
     print("You chose the wrong option, try by running the code again")
@@ -19,6 +19,7 @@ else:
         else:
             c = "odd"
             print(c)
+
     elif k == "positive, negative or zero":
         if n > 0:
             c = "positive"
@@ -29,6 +30,7 @@ else:
         else:
             c = "negative"
             print(c)
+
     elif k == "prime or composite number":
             s = 0
             for i in range(1, n + 1):
@@ -50,3 +52,25 @@ else:
             print(f)
         else:
             print(len(s))
+
+    elif k == "sum of digits":
+        if n < 0:
+            print("Invalid number")
+        else:
+            sum = 0
+            s = str(n)
+            for i in s:
+                i = int(i)
+                sum += i
+            print(sum)
+
+    elif k == "reverse of a number":
+        if n < 0:
+            print("Invalid number")
+        else:
+            s = str(n)
+            a = ""
+            for i in range(len(s) - 1 , -1, -1):
+                j = s[i]
+                a += j
+            print(a)
