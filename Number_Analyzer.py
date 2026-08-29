@@ -3,10 +3,10 @@ print("This is a program to analyze the number")
 n = int(input("Enter the number:"))
 
 print("What do you want to analyze?")
-print("even or odd / positive, negative or zero / prime or composite number / no. of digits / sum of digits / reverse of a number / palindrome check / factors")
+print("even or odd / positive, negative or zero / prime or composite number / no. of digits / sum of digits / reverse of a number / palindrome check / factors / perfect number")
 
 k = input("Enter your option: ")
-l = ["even or odd", "positive, negative or zero", "prime or composite number", "no. of digits", "sum of digits", "reverse of a number", "palindrome check", "factors"]
+l = ["even or odd", "positive, negative or zero", "prime or composite number", "no. of digits", "sum of digits", "reverse of a number", "palindrome check", "factors", "perfect number"]
 
 if k not in l:
     print("You chose the wrong option, try by running the code again")
@@ -101,3 +101,21 @@ else:
                 for i in range(1, n + 1):
                     if n%i == 0:
                         print(i)
+
+    elif k == "perfect number":
+            if n == 0:
+                print("Infinite factors")
+
+            elif n < 0:
+                print("Invalid number")
+
+            else:
+                sum = 0
+                for i in range(1, n):
+                    if n%i == 0:
+                        sum += i
+                print(sum)
+                if sum == n:
+                    print("It is a perfect number")
+                else:
+                    print("It is not a perfect number")
